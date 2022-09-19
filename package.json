@@ -1,0 +1,28 @@
+{
+  "name": "tarantool-queue-bug",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "keywords": [],
+  "author": "nick mann",
+  "private": true,
+  "dependencies": {
+    "tarantool-driver": "^3.0.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.12.6",
+    "@types/tarantool-driver": "3.0.0",
+    "jest": "^26.6.3",
+    "jest-circus": "^26.6.3",
+    "shx": "^0.3.3",
+    "testcontainers": "^3.4.11",
+    "ts-jest": "^26.4.4",
+    "ts-mockery": "^1.2.0",
+    "ts-node": "^9.0.0",
+    "tsc-watch": "^1.1.39",
+    "typescript": "^4.1.2"
+  }
+}

@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+ # explicit ttl causes problems
+ tarantool-queue:
+    container_name:  tarantool-queue
+    image:  tarantool-queue:1.0.3
+    environment:
+      TARANTOOL_USER_NAME: "queue"
+      TARANTOOL_USER_PASSWORD: "test"
+      TARANTOOL_MEMTX_MEMORY: "368709120"
+    ports:
+      - "13313:3301"
+    volumes:
+      - tarantool-queue:/var/lib/tarantool
+    restart: unless-stopped
+
+volumes:
+    tarantool-queue:
+      driver: local
