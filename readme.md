@@ -13,3 +13,8 @@ You end up with entries that have a ttl of 0 and a large next_event time
 `build.sh` (in docker)
 
 `npm run test`
+
+**issue**
+after the test fails the buffer has entries in a state where the ttl is 0, but next event is large
+`[[select "task_id" from "test_buffer" where "ttl" = 0;]]` 
+the entries are not returned from take as they are expired, but they should not have expired
